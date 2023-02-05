@@ -2,4 +2,6 @@
     <string name="app_name">NMedia</string>
     <string name="text">NMedia!</string>
     <string name="Author_avatar">Author avatar</string>
+    <string name="More">More</string>
+    <string name="todo">TODO</string>
 </resources>
