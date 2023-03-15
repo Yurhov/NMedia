@@ -10,10 +10,11 @@
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="@dimen/post_avatar_size"
-        android:layout_height="@dimen/post_avatar_size"
+        android:layout_width="@dimen/posts_avatar_size"
+        android:layout_height="@dimen/posts_avatar_size"
         android:layout_marginBottom="@dimen/common_spacing"
         android:contentDescription="@string/Author_avatar"
+        android:src="@drawable/netology_48"
         app:layout_constraintBottom_toTopOf="@id/barrier2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,14 +28,14 @@
         android:layout_marginEnd="8dp"
         android:ellipsize="end"
         android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@id/date"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@id/publiched"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toTopOf="@+id/avatar"
-        tools:text="Нетология. Университет интернет-профессий" />
+        tools:text="Нетология. Университет интернет-профессий будущего" />
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/publiched"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/common_spacing"
@@ -47,7 +48,7 @@
         tools:text="5 февраля в 17.00" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -61,13 +62,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-
-        app:constraint_referenced_ids="avatar,date,imageButton"
+        app:constraint_referenced_ids="avatar,publiched,menu"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="80dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
@@ -76,32 +76,32 @@
         tools:text="Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов." />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/likeCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
+        app:layout_constraintStart_toEndOf="@+id/like"
+        app:layout_constraintTop_toTopOf="@+id/like"
         tools:text="100К" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/countChare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
+        app:layout_constraintStart_toEndOf="@+id/chare"
+        app:layout_constraintTop_toTopOf="@+id/like"
         tools:text="12К" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/countViews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/like"
         tools:text="250К" />
 
     <ImageView
@@ -110,31 +110,31 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
+        app:layout_constraintEnd_toStartOf="@+id/countViews"
+        app:layout_constraintTop_toTopOf="@+id/like"
         app:srcCompat="@drawable/ic_baseline_visibility_24" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/content"
         app:srcCompat="@drawable/ic_baseline_favorite_border_24"
         android:contentDescription="@string/todo" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/chare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
+        app:layout_constraintStart_toEndOf="@+id/likeCount"
+        app:layout_constraintTop_toTopOf="@+id/like"
         app:srcCompat="@drawable/ic_baseline_share_24"
         android:contentDescription="@string/todo"/>
 
